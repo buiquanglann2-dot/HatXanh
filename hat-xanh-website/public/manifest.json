@@ -1,0 +1,17 @@
+{
+    "name": "Hạt Xanh - Nông Sản Tây Nguyên",
+    "short_name": "Hạt Xanh",
+    "description": "Chuyên cung cấp nông sản sạch từ Tây Nguyên",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#22c55e",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "/favicon.ico",
+            "sizes": "64x64 32x32 24x24 16x16",
+            "type": "image/x-icon"
+        }
+    ]
+}
