@@ -1,36 +1,124 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Hạt Xanh - E-commerce Website
 
-## Getting Started
+Nền tảng thương mại điện tử cho nông sản hữu cơ từ Tây Nguyên.
 
-First, run the development server:
+## 🌟 Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- ✅ **Modern Design System** - "Honest Freshness" với Tailwind CSS v4
+- ✅ **Responsive Layout** - Tối ưu cho mọi thiết bị
+- ✅ **SEO Optimized** - Sitemap, robots.txt, metadata
+- ✅ **Performance** - Next.js 16 với Turbopack
+- ✅ **Type Safety** - TypeScript toàn bộ codebase
+- ✅ **Testing Ready** - Jest + React Testing Library
+- ✅ **Accessibility** - WCAG 2.1 compliant
+
+## 📁 Project Structure
+
+```
+hat-xanh-website/
+├── src/
+│   ├── app/              # Next.js App Router pages
+│   ├── components/       # React components
+│   ├── data/            # Static data & config
+│   ├── lib/             # Utilities & helpers
+│   └── types/           # TypeScript types
+├── public/
+│   └── images/          # Static images
+├── .env.local           # Environment variables
+└── tailwind.config.ts   # Tailwind configuration
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Getting Started
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Prerequisites
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Node.js 18+
+- npm or yarn
 
-## Learn More
+### Installation
 
-To learn more about Next.js, take a look at the following resources:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/buiquanglann2-dot/HatXanh.git
+   cd hat-xanh-website
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. Create `.env.local`:
+   ```env
+   NEXT_PUBLIC_SITE_URL=http://localhost:3000
+   ```
 
-## Deploy on Vercel
+4. Run development server:
+   ```bash
+   npm run dev
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+5. Open [http://localhost:3000](http://localhost:3000)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📝 Available Scripts
+
+```bash
+npm run dev          # Start development server
+npm run build        # Build for production
+npm start            # Start production server
+npm run lint         # Run ESLint
+npm test             # Run tests
+npm run test:watch   # Run tests in watch mode
+npm run test:coverage # Generate coverage report
+```
+
+## 🎨 Design System
+
+### Colors
+
+- **Primary (Green)**: `#2d5016` - Màu xanh lá chủ đạo
+- **Secondary (Terracotta)**: `#c2410c` - Màu đất nung ấm áp
+- **Neutral**: Warm gray palette
+
+### Typography
+
+- **Display**: Playfair Display (Headings)
+- **Serif**: Merriweather (Body text, storytelling)
+- **Sans**: Inter (UI elements)
+
+## 📦 Tech Stack
+
+- **Framework**: Next.js 16
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS v4
+- **Icons**: React Icons
+- **Testing**: Jest + React Testing Library
+- **Deployment**: Vercel (recommended)
+
+## 📄 Documentation
+
+- [Testing Guide](./TESTING.md)
+- [Deployment Guide](./DEPLOYMENT.md)
+- [Image Guidelines](./public/images/README.md)
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📧 Contact
+
+- **Website**: [hatxanh.vn](https://hatxanh.vn)
+- **Email**: contact@hatxanh.vn
+- **GitHub**: [@buiquanglann2-dot](https://github.com/buiquanglann2-dot)
+
+## 📜 License
+
+This project is proprietary and confidential.
+
+---
+
+Made with ❤️ by Hạt Xanh Team
