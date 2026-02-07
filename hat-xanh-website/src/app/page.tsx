@@ -1,17 +1,17 @@
-import { HeroSection } from "@/components/home/HeroSection";
-import { CategoryGrid } from "@/components/home/CategoryGrid";
-import { FeaturedProducts } from "@/components/home/FeaturedProducts";
-import { Testimonials } from "@/components/home/Testimonials";
-import { Newsletter } from "@/components/home/Newsletter";
+import HeroSection from '@/components/home/HeroSection';
+import CategoryGrid from '@/components/home/CategoryGrid';
+import BestSellers from '@/components/home/BestSellers';
+import WhyChooseUs from '@/components/home/WhyChooseUs';
+import Testimonials from '@/components/home/Testimonials';
 
 export default function Home() {
   return (
-    <main className="flex flex-col">
+    <div className="max-w-[1280px] mx-auto">
       <HeroSection />
       <CategoryGrid />
-      <FeaturedProducts />
+      <BestSellers />
+      <WhyChooseUs />
       <Testimonials />
-      <Newsletter />
-    </main>
+    </div>
   );
 }

@@ -1,6 +1,7 @@
+// Force Re-render
 import React from 'react';
 import { Container } from '@/components/common/Container';
-import { ProductCard } from '@/components/products/ProductCard';
+import ProductCard from '@/components/products/ProductCard';
 import { products } from '@/data/products';
 import { Metadata } from 'next';
 

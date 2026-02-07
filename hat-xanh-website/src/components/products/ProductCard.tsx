@@ -1,100 +1,57 @@
-"use client";
-
-import React, { useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
-import { Product } from '@/types/product';
-import { formatCurrency } from '@/lib/utils';
-import { Button } from '@/components/common/Button';
-import { Badge } from '@/components/common/Badge';
-import { HiShoppingCart } from 'react-icons/hi';
+import React from 'react';
+import { Product } from '@/data/products';
 
 interface ProductCardProps {
     product: Product;
 }
 
-export const ProductCard = ({ product }: ProductCardProps) => {
-    const [isHovered, setIsHovered] = useState(false);
-
-    // Calculate discount percentage if original price exists
-    const discount = product.originalPrice && product.originalPrice > product.price
-        ? Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100)
-        : 0;
-
+export default function ProductCard({ product }: ProductCardProps) {
     return (
-        <div
-            className="group relative flex flex-col overflow-hidden rounded-2xl bg-white border border-neutral-100 shadow-soft transition-all duration-300 hover:shadow-hover hover:-translate-y-1"
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-        >
-            {/* Image Section */}
-            <Link href={`/san-pham/${product.slug}`} className="relative aspect-[4/3] overflow-hidden bg-neutral-50">
-                <Image
-                    src={product.images.thumbnail}
-                    alt={`${product.name} - Nông sản hữu cơ Hạt Xanh`}
-                    fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        <div className="bg-white dark:bg-slate-800 rounded-2xl overflow-hidden group shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 dark:border-slate-700 hover:-translate-y-1 flex flex-col h-full">
+            <div className="relative aspect-square overflow-hidden bg-gray-100">
+                <div
+                    className="w-full h-full bg-center bg-cover group-hover:scale-110 transition-transform duration-500"
+                    style={{ backgroundImage: `url('${product.image}')` }}
                 />
-
-                {/* Gradient Overlay for Text Contrast (Bottom only) */}
-                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-
-                {/* Badges */}
-                <div className="absolute left-3 top-3 flex flex-col gap-2">
-                    {product.certifications?.includes('organic') && (
-                        <Badge variant="success" animated>Hữu cơ</Badge>
-                    )}
-                    {discount > 0 && (
-                        <Badge variant="warning" animated>-{discount}%</Badge>
-                    )}
-                </div>
-            </Link>
-
-            {/* Content Section */}
-            <div className="relative flex flex-1 flex-col p-5">
-                <Link href={`/san-pham/${product.slug}`} className="group-hover:text-primary-600 transition-colors">
-                    <h3 className="font-display text-lg font-bold text-neutral-900 line-clamp-2 mb-1">
-                        {product.name}
-                    </h3>
-                </Link>
-
-                {/* Rating / Category Placeholder */}
-                <div className="text-sm text-neutral-500 mb-3">{product.category}</div>
-
-                {/* Price Section */}
-                <div className="mt-auto flex items-baseline gap-2">
-                    <span className="text-xl font-bold text-primary-700">
-                        {formatCurrency(product.price)}
+                {product.salePercentage && (
+                    <span className="absolute top-3 left-3 bg-red-500 text-white text-[10px] font-bold px-2 py-1 rounded">
+                        -{product.salePercentage}%
                     </span>
-                    {product.originalPrice && product.originalPrice > product.price && (
-                        <span className="text-sm text-neutral-400 line-through">
-                            {formatCurrency(product.originalPrice)}
-                        </span>
-                    )}
-                    <span className="text-sm text-neutral-500">/{product.unit}</span>
+                )}
+                {product.isHot && (
+                    <span className="absolute top-3 right-3 bg-orange-500 text-white text-[10px] font-bold px-2 py-1 rounded">
+                        HOT
+                    </span>
+                )}
+                <button className="absolute bottom-3 right-3 bg-[#276515] text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all shadow-lg hover:bg-[#166534]">
+                    <span className="material-symbols-outlined text-sm">add_shopping_cart</span>
+                </button>
+            </div>
+            <div className="p-4 flex flex-col gap-2 flex-1">
+                <div className="flex-1">
+                    <p className="text-xs text-[#276515] font-semibold mb-1 uppercase tracking-wider">{product.category}</p>
+                    <h4 className="font-bold text-slate-800 dark:text-white text-base line-clamp-2 hover:text-[#276515] transition-colors cursor-pointer">
+                        <Link href={`/products/${product.id}`}>{product.name}</Link>
+                    </h4>
                 </div>
 
-                {/* Floating Add to Cart Button */}
-                <div className={`
-                    absolute bottom-4 right-4 z-10 
-                    transform transition-all duration-300 ease-out
-                    ${isHovered ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0 pointer-events-none md:translate-y-2'}
-                `}>
-                    <Button
-                        size="sm"
-                        variant="primary"
-                        className="shadow-glow-sm hover:shadow-glow-md rounded-full px-4"
-                        onClick={(e) => {
-                            e.preventDefault();
-                            console.log('Added to cart:', product.name);
-                        }}
-                    >
-                        <HiShoppingCart className="mr-2 h-4 w-4" />
-                        Thêm vào giỏ
-                    </Button>
+                <div className="flex items-center gap-1 mb-1">
+                    {[...Array(5)].map((_, i) => (
+                        <span key={i} className={`material-symbols-outlined text-[14px] ${i < Math.round(product.rating) ? 'text-yellow-400 fill-current' : 'text-gray-300'}`}>star</span>
+                    ))}
+                    <span className="text-xs text-slate-400 ml-1">({product.reviews})</span>
+                </div>
+
+                <div className="flex items-center justify-between mt-auto pt-2 border-t border-slate-100 dark:border-slate-700">
+                    <div className="flex flex-col">
+                        <span className="text-[#276515] text-lg font-black">{product.price.toLocaleString('vi-VN')}đ</span>
+                        {product.originalPrice && (
+                            <span className="text-slate-400 text-xs line-through">{product.originalPrice.toLocaleString('vi-VN')}đ</span>
+                        )}
+                    </div>
                 </div>
             </div>
         </div>
     );
-};
+}

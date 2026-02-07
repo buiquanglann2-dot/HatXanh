@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Hạt Xanh Product Detail (Classic) - Hạt Macca Úc</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#166434",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#122017",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-[#F0FDF4] dark:bg-background-dark text-[#121714] dark:text-gray-100 font-display transition-colors duration-300">
+<!-- Header / Navbar -->
+<header class="sticky top-0 z-50 bg-white dark:bg-zinc-900 border-b border-gray-200 dark:border-zinc-800">
+<div class="max-w-[1200px] mx-auto px-4 h-16 flex items-center justify-between">
+<!-- Logo & Brand -->
+<div class="flex items-center gap-8">
+<a class="flex items-center gap-2 group" href="#">
+<div class="bg-primary text-white p-1.5 rounded-lg group-hover:bg-primary/90 transition-colors">
+<span class="material-symbols-outlined text-2xl">eco</span>
+</div>
+<span class="text-xl font-bold tracking-tight text-primary dark:text-green-500">Hạt Xanh</span>
+</a>
+<!-- Search Bar -->
+<div class="hidden md:flex items-center bg-gray-100 dark:bg-zinc-800 rounded-lg px-3 py-1.5 w-72">
+<span class="material-symbols-outlined text-gray-500 text-xl">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-full placeholder:text-gray-400" placeholder="Tìm kiếm hạt dinh dưỡng..." type="text"/>
+</div>
+</div>
+<!-- Navigation Links -->
+<nav class="hidden lg:flex items-center gap-8">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Sản phẩm</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Về chúng tôi</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Kiến thức</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Liên hệ</a>
+</nav>
+<!-- Actions -->
+<div class="flex items-center gap-3">
+<button class="p-2 hover:bg-gray-100 dark:hover:bg-zinc-800 rounded-full transition-colors relative">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="absolute top-1 right-1 bg-primary text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full">2</span>
+</button>
+<button class="p-2 hover:bg-gray-100 dark:hover:bg-zinc-800 rounded-full transition-colors">
+<span class="material-symbols-outlined">person</span>
+</button>
+</div>
+</div>
+</header>
+<main class="max-w-[1200px] mx-auto px-4 py-8">
+<!-- Main Product Section -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
+<!-- Left: Product Gallery -->
+<div class="space-y-4">
+<div class="bg-white dark:bg-zinc-800 p-4 rounded-xl shadow-sm">
+<img alt="Main Product Image" class="w-full aspect-square object-cover rounded-lg" data-alt="Premium Australian Macadamia nuts in a wooden bowl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkOy2KxuoGVSC0XVzSTptzrlkwsoHdzSkzwXv1bGUvjSobhW5j8TolZ_njQVq8RqcedSr8hth43RVni-HuQSJLZoUUZM_jp1nbiHgrezZQZX81dlgKZZwHnH7VjnckctXfWMPp10_a-mijtzqZzOQVhRA1P8EN5HaP0wLID_3bPpke9n6MR2zJy_1iNkDKJxrSG2SGo7VE_3pnfyJBbYYp1hq3sVnIeRiJPYDuu3Qvm37xDA0PXeninekJn0weQiQQu4Muy57EFuE"/>
+</div>
+<!-- Thumbnail Carousel -->
+<div class="flex gap-3 overflow-x-auto pb-2 scrollbar-hide">
+<div class="min-w-[80px] h-20 border-2 border-primary rounded-lg overflow-hidden cursor-pointer bg-white">
+<img class="w-full h-full object-cover" data-alt="Close up of macadamia nut details" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALwIsOpmu0SawQFqXvnzoJhWyjroqUbLQH5Md25hs2d9OFXrRM-iPoyhWKGAG_cYXbXtUQiR9IG0NPooXiiafj2bUG7IPoSNW6SDZj6w_wnm_4GIZhbOdV3wk5-qxRBJYFe7QunQOfU4KRKqgssrWd1HtISsVht13k_STULc8JvJed7EKvocp_tqTcaz6Ba_ADH8143RO-GdORsYJ9h6MG6F6xVPekJKKW9K0_Jo6xmT6Sb_47n17_hen_bCtMflhaCaAy0luBk90"/>
+</div>
+<div class="min-w-[80px] h-20 border-2 border-transparent hover:border-primary/50 rounded-lg overflow-hidden cursor-pointer bg-white">
+<img class="w-full h-full object-cover" data-alt="Macadamia nuts spilled on a table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGrBuAD2wNylRtRNnOBI8x-Tzr_oQnztBQ-XCRpkacVyt6aSEHWqJmN4-rf9jmaN2d_z2ALIsyUh4AJojurvoLo4I7aifyC2EIOVdo3WjdQPbmX_esbC24o66kCgr7CqZ82OPo-xdsWWU9KqV-Rnoc2c0mVXrFRTBvB8GrKtJI2xLOOk8su9hVQP-nePNd1prnuCpLfgwotIlSiGUOYtpx8YbYjvYsGXRJ8TUKSs2-m-HV_hbTMy-ZZte76BVE8nZuZRHYH72Waow"/>
+</div>
+<div class="min-w-[80px] h-20 border-2 border-transparent hover:border-primary/50 rounded-lg overflow-hidden cursor-pointer bg-white">
+<img class="w-full h-full object-cover" data-alt="Packaging box of Hạt Xanh products" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALS2zORF2OauSGtgcMOSUD0g09Wm_jmiqfV6lbN5XT-pfkCRdFukVNQlkwgIHK3_l8C116dHp3MB1QQ2pswRgc_Xl4hTaRs0dN7UdmQd_qbxFAPqjy4a-zz7UyO3IMOrRsQZUrIP-f5AJ7wdVL0jipw6ZauM1QWJobXiCz9p8mqrXm32TuOWxviLC-ynDoJ-NTN5uL2v3L3XwPhAYTR1CNo4NGEbQuujZW4-E0OMmF7M_KengqA3H8RayVx8mG4gjv4m80J579NFg"/>
+</div>
+<div class="min-w-[80px] h-20 border-2 border-transparent hover:border-primary/50 rounded-lg overflow-hidden cursor-pointer bg-white">
+<img class="w-full h-full object-cover" data-alt="Health benefits of macadamia nuts illustration" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8ifSpd80bfHdENypfvsqQc6lxxmBsuOB6Ek5VYcqQ3AdKFVNN-6teNs4_oAE1qH4k0MatHxt8rmuqr24Izwo1kmWmju9ogdACFepaRSZJpgJUxt6DqvsjrkVvS04imuqdrEAw3qyPINMHCdzf2TA5adYrFvP6s75gL68gBdYyQ2h1UYoWDcibb-QjZ6CduPe5bb2PL5HVkD-xLTy1ZLS7-3D-PWspSgz13N1QWIBUOQddQhGtAafTOyeVk43cZ582QuWGAfo6FMM"/>
+</div>
+</div>
+</div>
+<!-- Right: Product Info -->
+<div class="flex flex-col">
+<!-- Breadcrumbs -->
+<nav class="flex items-center gap-2 text-xs text-gray-500 mb-4">
+<a class="hover:text-primary" href="#">Trang chủ</a>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+<a class="hover:text-primary" href="#">Hạt dinh dưỡng</a>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+<span class="text-gray-900 dark:text-gray-300 font-medium">Hạt Macca</span>
+</nav>
+<h1 class="text-[32px] font-bold leading-tight mb-2 text-gray-900 dark:text-white">Hạt Macca Úc Nứt Vỏ - Size VIP</h1>
+<!-- Rating -->
+<div class="flex items-center gap-2 mb-6">
+<div class="flex text-yellow-400">
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+</div>
+<span class="text-sm text-gray-500">(128 đánh giá) | 2.5k đã bán</span>
+</div>
+<!-- Price -->
+<div class="flex items-center gap-4 mb-8 p-4 bg-primary/5 dark:bg-primary/20 rounded-xl">
+<span class="text-3xl font-bold text-primary dark:text-green-400">150.000đ</span>
+<span class="text-lg text-gray-400 line-through">180.000đ</span>
+<span class="bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">-20%</span>
+</div>
+<!-- Features -->
+<ul class="space-y-3 mb-8">
+<li class="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-300">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                        Nguồn gốc từ các nông trại bền vững tại Úc, đạt chuẩn Organic.
+                    </li>
+<li class="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-300">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                        Size VIP tuyển chọn, hạt đều, to, béo ngậy tự nhiên.
+                    </li>
+<li class="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-300">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                        Không chất bảo quản, sấy lạnh giữ trọn dinh dưỡng.
+                    </li>
+</ul>
+<!-- Options -->
+<div class="space-y-6 mb-8">
+<div>
+<span class="block text-sm font-semibold mb-3">Trọng lượng:</span>
+<div class="flex gap-3">
+<button class="px-6 py-2 border-2 border-primary bg-primary/10 text-primary font-bold rounded-lg transition-all">250g</button>
+<button class="px-6 py-2 border-2 border-gray-200 dark:border-zinc-700 hover:border-primary text-gray-600 dark:text-gray-300 rounded-lg transition-all">500g</button>
+</div>
+</div>
+<div>
+<span class="block text-sm font-semibold mb-3">Số lượng:</span>
+<div class="flex items-center gap-4">
+<div class="flex items-center border border-gray-300 dark:border-zinc-700 rounded-lg bg-white dark:bg-zinc-800 overflow-hidden h-11">
+<button class="px-3 hover:bg-gray-100 dark:hover:bg-zinc-700 flex items-center justify-center">
+<span class="material-symbols-outlined text-lg">remove</span>
+</button>
+<input class="w-12 text-center border-none focus:ring-0 bg-transparent text-sm font-bold" type="number" value="1"/>
+<button class="px-3 hover:bg-gray-100 dark:hover:bg-zinc-700 flex items-center justify-center">
+<span class="material-symbols-outlined text-lg">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- CTAs -->
+<div class="flex flex-col sm:flex-row gap-4 mb-8">
+<button class="flex-1 h-14 border-2 border-primary text-primary font-bold rounded-xl hover:bg-primary/5 transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+                        Thêm vào giỏ
+                    </button>
+<button class="flex-[1.5] h-14 bg-primary hover:bg-green-900 text-white font-bold rounded-xl shadow-lg shadow-primary/20 transition-all flex items-center justify-center gap-2">
+                        Mua ngay
+                    </button>
+</div>
+<!-- Trust Badges -->
+<div class="grid grid-cols-2 gap-4 border-t border-gray-200 dark:border-zinc-800 pt-6">
+<div class="flex items-center gap-3">
+<div class="size-10 bg-blue-50 dark:bg-blue-900/20 rounded-full flex items-center justify-center text-blue-600">
+<span class="material-symbols-outlined">local_shipping</span>
+</div>
+<div>
+<p class="text-xs font-bold uppercase tracking-wider">Miễn phí giao hàng</p>
+<p class="text-[10px] text-gray-500">Đơn hàng từ 500k</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="size-10 bg-orange-50 dark:bg-orange-900/20 rounded-full flex items-center justify-center text-orange-600">
+<span class="material-symbols-outlined">assignment_return</span>
+</div>
+<div>
+<p class="text-xs font-bold uppercase tracking-wider">7 ngày đổi trả</p>
+<p class="text-[10px] text-gray-500">Hoàn tiền 100%</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Tabbed Section -->
+<section class="bg-white dark:bg-zinc-900 rounded-2xl shadow-sm mb-16 overflow-hidden">
+<div class="flex border-b border-gray-100 dark:border-zinc-800 px-4">
+<button class="px-8 py-5 text-sm font-bold text-primary border-b-2 border-primary">Mô tả chi tiết</button>
+<button class="px-8 py-5 text-sm font-medium text-gray-500 hover:text-gray-900 dark:hover:text-white transition-colors">Thành phần</button>
+<button class="px-8 py-5 text-sm font-medium text-gray-500 hover:text-gray-900 dark:hover:text-white transition-colors">Đánh giá</button>
+</div>
+<div class="p-8">
+<div class="prose max-w-none text-gray-600 dark:text-gray-300 space-y-4">
+<p>Hạt Macadamia được mệnh danh là "nữ hoàng của các loại quả khô" nhờ hàm lượng dinh dưỡng vượt trội và hương vị béo ngậy đặc trưng. Sản phẩm Hạt Macca Úc Nứt Vỏ - Size VIP của Hạt Xanh được tuyển chọn từ những trang trại chất lượng nhất tại Australia.</p>
+<h3 class="text-lg font-bold text-gray-900 dark:text-white">Tại sao nên chọn Hạt Macca của Hạt Xanh?</h3>
+<ul class="list-disc pl-5 space-y-2">
+<li>Hạt nứt vỏ tự nhiên, dễ dàng tách nhân bằng dụng cụ kèm theo.</li>
+<li>Quy trình sấy nhiệt độ thấp giữ nguyên hàm lượng Omega-3, Omega-7 và các khoáng chất quý giá.</li>
+<li>Sản phẩm đóng gói hũ thủy tinh cao cấp, đảm bảo độ giòn và sạch sẽ.</li>
+<li>Phù hợp cho mọi lứa tuổi, đặc biệt tốt cho mẹ bầu và trẻ nhỏ.</li>
+</ul>
+<img alt="Production Process" class="rounded-xl w-full h-80 object-cover my-8" data-alt="Macadamia nuts being harvested in a field" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeQJpbdl2C1bBvAary-s8Ar9g42TZCt4n3u5RUzP575cea_FfXMWYNpUtneErCczz8RjJLq2j53-RXzmvKNTxfc4OtZrQXxx9KzwOHCcKz87Rtt36fmsYrvsp_LtA3DJ1FPi7Lj_u1Br3D8WBIjg-WapaKGJrFGmLd2i7VVRVBy6uOYmXhxy-ZSfUEG1pUZncfblpPVgPNJZXARPSQohnaFo40DfkF6XAin-i1724DjYCC9OBmadlIBWOzPqCkWG85C80yS2NMZPc"/>
+</div>
+</div>
+</section>
+<!-- Related Products Section -->
+<section class="mb-12">
+<div class="flex items-center justify-between mb-8">
+<h2 class="text-2xl font-bold text-gray-900 dark:text-white">Sản phẩm liên quan</h2>
+<div class="flex gap-2">
+<button class="size-10 border border-gray-200 dark:border-zinc-700 rounded-full flex items-center justify-center hover:bg-white dark:hover:bg-zinc-800 transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<button class="size-10 border border-gray-200 dark:border-zinc-700 rounded-full flex items-center justify-center hover:bg-white dark:hover:bg-zinc-800 transition-colors">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Related Card 1 -->
+<div class="bg-white dark:bg-zinc-900 rounded-xl p-4 shadow-sm hover:shadow-md transition-all group border border-gray-100 dark:border-zinc-800">
+<div class="relative overflow-hidden rounded-lg aspect-square mb-4">
+<img alt="Almonds" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Healthy raw almond nuts in a jar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfPJAm4oE-k_dJ9GmRd-_3n-IqeXFzWRpR5Q8B2kl4CPnTnAXpGXBlS9O2I5XN5aIwra8WMEzJr8V4lhkYXt-vzuDSWQx4Szfrw10tKgefg7jMJs3ddxnWwOaH2aJWpSxb5Ko1PzrGO8ltWpIHeAtfxAETpRxsg4np6C54-_d8lG_cVoXWR15GGVMd_sk8ARY77KhG1Ks5-tKzlP6sQYl7jvvSwfBjYaAMZ-ddElsRxOwfLvYjBnlG6d5Awgp7jeioELLHadZv21A"/>
+</div>
+<h3 class="font-bold text-gray-900 dark:text-white mb-2 line-clamp-1">Hạt Hạnh Nhân Mỹ - Sấy Mộc</h3>
+<div class="flex items-center gap-2 mb-4">
+<span class="text-primary font-bold">120.000đ</span>
+<span class="text-xs text-gray-400 line-through">150.000đ</span>
+</div>
+<button class="w-full py-2 bg-gray-100 dark:bg-zinc-800 text-sm font-bold rounded-lg hover:bg-primary hover:text-white transition-colors">Xem chi tiết</button>
+</div>
+<!-- Related Card 2 -->
+<div class="bg-white dark:bg-zinc-900 rounded-xl p-4 shadow-sm hover:shadow-md transition-all group border border-gray-100 dark:border-zinc-800">
+<div class="relative overflow-hidden rounded-lg aspect-square mb-4">
+<img alt="Walnuts" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Shelled walnuts on a bright background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFHDoVpuEFwxhCyOUacd2OLl_jDIdKQFoKa6WQjnyEf-0IJtMk5bxanPtlg4YLSndNmehNcFO65GSQ58DODKlwtOJdNq8WhKIXZuirDvp-durqRTELEvrGqfvxWei4-iXwD2xjwn-BCyejk-6_WcQA88AtRS0R65vGNSiu1rzWUgIsQ4gQaYp9DsQ71ca7BcZZKb3YEPXrpwiE8Iu0HGPZSLKzC43AThM2-5Fo9tIzrqrVr6TBPok_KjC9PRaV04oCGjnjoTdt4Ps"/>
+</div>
+<h3 class="font-bold text-gray-900 dark:text-white mb-2 line-clamp-1">Nhân Quả Óc Chó Đỏ - Chile</h3>
+<div class="flex items-center gap-2 mb-4">
+<span class="text-primary font-bold">195.000đ</span>
+</div>
+<button class="w-full py-2 bg-gray-100 dark:bg-zinc-800 text-sm font-bold rounded-lg hover:bg-primary hover:text-white transition-colors">Xem chi tiết</button>
+</div>
+<!-- Related Card 3 -->
+<div class="bg-white dark:bg-zinc-900 rounded-xl p-4 shadow-sm hover:shadow-md transition-all group border border-gray-100 dark:border-zinc-800">
+<div class="relative overflow-hidden rounded-lg aspect-square mb-4">
+<img alt="Cashews" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Roasted cashews with sea salt" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVWOMiP4dmlIzCW0o9By66SkJKYDzhKBwEza30NZkllDUxYSmkN0zyfYQzVwb0qD2YFQHoWMvD8OBXOfEbueBwVgDsWoWDKF4PumLxXKtrhZnxS1sQI8eNw8H6RzXNXdmRmpAPOiVlMgmmXW-IzN4rN6dydlfYTeExQM6kORfIFOHGRUPEy0eTI0Vve_BAfpz-NvKEmEdF5X3Ugtb3-ZY1b4RjT0VZVI4sT7Ap7lkvW7V3XEvMGGNqDX6qieu_rO-2DnV0uxzjooU"/>
+</div>
+<h3 class="font-bold text-gray-900 dark:text-white mb-2 line-clamp-1">Hạt Điều Rang Muối - Loại 1</h3>
+<div class="flex items-center gap-2 mb-4">
+<span class="text-primary font-bold">135.000đ</span>
+<span class="text-xs text-gray-400 line-through">160.000đ</span>
+</div>
+<button class="w-full py-2 bg-gray-100 dark:bg-zinc-800 text-sm font-bold rounded-lg hover:bg-primary hover:text-white transition-colors">Xem chi tiết</button>
+</div>
+<!-- Related Card 4 -->
+<div class="bg-white dark:bg-zinc-900 rounded-xl p-4 shadow-sm hover:shadow-md transition-all group border border-gray-100 dark:border-zinc-800">
+<div class="relative overflow-hidden rounded-lg aspect-square mb-4">
+<img alt="Pistachios" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Bowl of opened pistachio nuts" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPtxXZygkKJK-FeDxm-tzh-M9BIGSGBLojcY1KHB3nHcSxt0_Cw1_zqdjGvXICTJnIxlJ68SnlvjhOuk389ik9rP1vMhl5CWbSJ1ItmdDgVITw8n2219xVVkE4cloT5wMOwLGUdsRaN4O5h_Iuu61VGkIniX-lxOKzgJB0wIrrXV2DCAxO3NDbmH_9tbMd7s8ko6Z-WmUfN-zVjpu5dEQZ3IIv5W0WUK9lQAAEnL_jtr4aSkF8qcgoQLaJmUvgHc_Vq9QUByzkz1c"/>
+</div>
+<h3 class="font-bold text-gray-900 dark:text-white mb-2 line-clamp-1">Hạt Dẻ Cười Mỹ - Không Tẩy Trắng</h3>
+<div class="flex items-center gap-2 mb-4">
+<span class="text-primary font-bold">210.000đ</span>
+</div>
+<button class="w-full py-2 bg-gray-100 dark:bg-zinc-800 text-sm font-bold rounded-lg hover:bg-primary hover:text-white transition-colors">Xem chi tiết</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-zinc-900 text-gray-400 py-12 border-t border-zinc-800">
+<div class="max-w-[1200px] mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-12">
+<div>
+<a class="flex items-center gap-2 mb-6" href="#">
+<div class="bg-primary text-white p-1 rounded-lg">
+<span class="material-symbols-outlined text-xl">eco</span>
+</div>
+<span class="text-xl font-bold tracking-tight text-white">Hạt Xanh</span>
+</a>
+<p class="text-sm leading-relaxed mb-6">Chuyên cung cấp các loại hạt dinh dưỡng nhập khẩu và đặc sản vùng miền chất lượng cao, mang lại giá trị sức khỏe bền vững.</p>
+<div class="flex gap-4">
+<a class="hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
+<a class="hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">forum</span></a>
+</div>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Về Hạt Xanh</h4>
+<ul class="space-y-4 text-sm">
+<li><a class="hover:text-white transition-colors" href="#">Giới thiệu</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Tuyển dụng</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Chính sách bảo mật</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Điều khoản dịch vụ</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Hỗ trợ khách hàng</h4>
+<ul class="space-y-4 text-sm">
+<li><a class="hover:text-white transition-colors" href="#">Câu hỏi thường gặp</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Hướng dẫn mua hàng</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Chính sách vận chuyển</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Chính sách đổi trả</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Đăng ký nhận tin</h4>
+<p class="text-sm mb-4">Nhận ưu đãi 10% cho đơn hàng đầu tiên.</p>
+<div class="flex gap-2">
+<input class="bg-zinc-800 border-none rounded-lg text-sm flex-1 focus:ring-primary" placeholder="Email của bạn" type="email"/>
+<button class="bg-primary text-white px-4 py-2 rounded-lg font-bold text-sm hover:bg-green-700 transition-colors">Gửi</button>
+</div>
+</div>
+</div>
+<div class="max-w-[1200px] mx-auto px-4 mt-12 pt-8 border-t border-zinc-800 text-center text-xs">
+<p>© 2024 Hạt Xanh - All Rights Reserved. Thiết kế bởi UI Designer.</p>
+</div>
+</footer>
+</body></html>

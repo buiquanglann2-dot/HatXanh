@@ -1,91 +1,32 @@
 import React from 'react';
-import { Container } from '@/components/common/Container';
-import { HiStar } from 'react-icons/hi';
+import { testimonials } from '@/data/testimonials';
 
-const testimonials = [
-    {
-        id: 1,
-        name: 'Nguyễn Thị Lan',
-        role: 'Khách hàng thân thiết',
-        avatar: '👩‍💼',
-        rating: 5,
-        content: 'Hạt điều của Hạt Xanh thật sự khác biệt! Vị rang củi truyền thống, giòn tan và thơm bùi. Gia đình tôi rất thích.',
-        location: 'Hà Nội',
-    },
-    {
-        id: 2,
-        name: 'Trần Văn Minh',
-        role: 'Chủ quán cafe',
-        avatar: '👨‍💼',
-        rating: 5,
-        content: 'Cà phê Buôn Ma Thuột từ Hạt Xanh có hương vị đậm đà, nguyên chất. Khách hàng quán tôi đều khen ngợi.',
-        location: 'TP. Hồ Chí Minh',
-    },
-    {
-        id: 3,
-        name: 'Lê Thị Hương',
-        role: 'Mẹ bỉm sữa',
-        avatar: '👩‍🍼',
-        rating: 5,
-        content: 'Trái cây sấy dẻo rất tiện cho bé ăn vặt. Không chất bảo quản, tự nhiên 100%. Tôi rất yên tâm.',
-        location: 'Đà Nẵng',
-    },
-];
-
-export const Testimonials = () => {
+export default function Testimonials() {
     return (
-        <section className="py-16 md:py-24 bg-white">
-            <Container>
-                <div className="text-center mb-12">
-                    <h2 className="font-display text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
-                        Khách Hàng Nói Gì Về Chúng Tôi
-                    </h2>
-                    <p className="text-neutral-600 text-lg max-w-2xl mx-auto">
-                        Niềm tin của khách hàng là động lực lớn nhất để Hạt Xanh không ngừng cải thiện chất lượng
-                    </p>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-                    {testimonials.map((testimonial) => (
-                        <div
-                            key={testimonial.id}
-                            className="bg-neutral-50 rounded-2xl p-8 border border-neutral-100 hover:shadow-soft transition-all duration-300 hover:-translate-y-1"
-                        >
-                            {/* Rating Stars */}
-                            <div className="flex gap-1 mb-4">
-                                {[...Array(testimonial.rating)].map((_, i) => (
-                                    <HiStar key={i} className="w-5 h-5 text-secondary-500 fill-current" />
-                                ))}
-                            </div>
-
-                            {/* Content */}
-                            <p className="text-neutral-700 leading-relaxed mb-6 font-serif italic">
-                                &quot;{testimonial.content}&quot;
-                            </p>
-
-                            {/* Author */}
-                            <div className="flex items-center gap-4 pt-4 border-t border-neutral-200">
-                                <div className="w-12 h-12 rounded-full bg-primary-100 flex items-center justify-center text-2xl">
-                                    {testimonial.avatar}
-                                </div>
-                                <div>
-                                    <p className="font-bold text-neutral-900">{testimonial.name}</p>
-                                    <p className="text-sm text-neutral-500">{testimonial.role} • {testimonial.location}</p>
-                                </div>
-                            </div>
-                        </div>
+        <section className="px-6 lg:px-12 py-20 bg-[#166534]/5 rounded-[2rem] mb-20">
+            <div className="text-center mb-16">
+                <h3 className="text-3xl font-black mb-4 dark:text-white">Khách hàng nói về chúng tôi</h3>
+                <div className="flex justify-center gap-1 text-yellow-400">
+                    {[...Array(5)].map((_, i) => (
+                        <span key={i} className="material-symbols-outlined fill-current">star</span>
                     ))}
                 </div>
-
-                {/* Trust Badge */}
-                <div className="mt-12 text-center">
-                    <div className="inline-flex items-center gap-2 bg-primary-50 text-primary-700 px-6 py-3 rounded-full border border-primary-200">
-                        <HiStar className="w-5 h-5 fill-current" />
-                        <span className="font-bold">4.9/5</span>
-                        <span className="text-neutral-600">từ 500+ đánh giá</span>
+                <p className="mt-2 text-slate-600 dark:text-slate-400 font-medium">4.9/5 dựa trên 2,500+ đánh giá</p>
+            </div>
+            <div className="flex gap-6 overflow-x-auto hide-scrollbar pb-8 px-4 snap-x">
+                {testimonials.map((item) => (
+                    <div key={item.id} className="min-w-[320px] md:min-w-[400px] bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-sm snap-center">
+                        <div className="flex items-center gap-4 mb-6">
+                            <div className="w-14 h-14 rounded-full bg-center bg-cover ring-2 ring-[#276515]/20" style={{ backgroundImage: `url('${item.avatar}')` }}></div>
+                            <div>
+                                <h6 className="font-bold dark:text-white">{item.name}</h6>
+                                <p className="text-xs text-slate-400">{item.role}</p>
+                            </div>
+                        </div>
+                        <p className="text-slate-600 dark:text-slate-300 italic">{item.content}</p>
                     </div>
-                </div>
-            </Container>
+                ))}
+            </div>
         </section>
     );
-};
+}

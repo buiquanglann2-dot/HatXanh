@@ -1,97 +1,36 @@
-import React from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
-import { Button } from '@/components/common/Button';
-import { GlassCard } from '@/components/common/GlassCard';
-import { HiArrowRight, HiChevronDown } from 'react-icons/hi';
+import React from 'react';
 
-export const HeroSection = () => {
+export default function HeroSection() {
     return (
-        <section className="relative flex min-h-screen items-center justify-center overflow-hidden">
-            {/* Background Image with Overlay */}
-            <div className="absolute inset-0">
-                {/* Placeholder background - replace with actual Tây Nguyên landscape image */}
-                <div className="absolute inset-0 bg-gradient-to-br from-primary-600 via-primary-500 to-secondary-500" />
+        <section className="flex flex-col lg:flex-row items-center gap-12 px-6 lg:px-12 py-16 lg:py-24 overflow-hidden relative">
+            {/* Background elements */}
+            <div className="absolute top-0 right-0 w-1/2 h-full bg-[#F0FDF4] -z-10 rounded-l-[100px] hidden lg:block"></div>
 
-                {/* Dark overlay for better text readability */}
-                <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/40" />
-
-                {/* Animated gradient orbs */}
-                <div className="absolute top-1/4 left-1/4 h-96 w-96 rounded-full bg-primary-400/30 blur-3xl animate-float" />
-                <div className="absolute bottom-1/4 right-1/4 h-96 w-96 rounded-full bg-secondary-400/30 blur-3xl animate-float animation-delay-200" />
-            </div>
-
-            {/* Content */}
-            <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8">
-                <div className="mx-auto max-w-7xl">
-                    <GlassCard
-                        variant="subtle"
-                        className="mx-auto max-w-4xl p-8 sm:p-12 lg:p-16 text-center"
-                    >
-                        {/* Main Heading */}
-                        <h1 className="font-display text-5xl font-bold tracking-tight text-white sm:text-6xl lg:text-7xl animate-fade-in">
-                            Nông Sản Sạch
-                            <br />
-                            <span className="bg-gradient-to-r from-primary-200 to-secondary-200 bg-clip-text text-transparent">
-                                Từ Tây Nguyên
-                            </span>
-                        </h1>
-
-                        {/* Subtitle */}
-                        <p className="mx-auto mt-6 max-w-2xl text-lg text-white/90 sm:text-xl lg:text-2xl animate-slide-up animation-delay-100">
-                            Mang hương vị tự nhiên, tinh túy của đại ngàn đến từng gia đình Việt.
-                            <br className="hidden sm:block" />
-                            Cam kết chất lượng, 100% tự nhiên, không chất bảo quản.
-                        </p>
-
-                        {/* CTA Buttons */}
-                        <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row animate-scale-in animation-delay-200">
-                            <Button
-                                variant="gradient"
-                                size="lg"
-                                asChild
-                                className="group shadow-glow-lg"
-                            >
-                                <Link href="/san-pham" className="flex items-center">
-                                    Khám phá ngay
-                                    <HiArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-                                </Link>
-                            </Button>
-                            <Button
-                                variant="glass"
-                                size="lg"
-                                asChild
-                                className="text-white hover:text-neutral-900"
-                            >
-                                <Link href="/gioi-thieu">
-                                    Về chúng tôi
-                                </Link>
-                            </Button>
-                        </div>
-
-                        {/* Trust Indicators */}
-                        <div className="mt-12 flex flex-wrap justify-center gap-8 text-white/80 animate-fade-in animation-delay-300">
-                            <div className="flex flex-col items-center">
-                                <span className="font-display text-3xl font-bold text-white">100%</span>
-                                <span className="text-sm">Tự nhiên</span>
-                            </div>
-                            <div className="flex flex-col items-center">
-                                <span className="font-display text-3xl font-bold text-white">5+</span>
-                                <span className="text-sm">Năm kinh nghiệm</span>
-                            </div>
-                            <div className="flex flex-col items-center">
-                                <span className="font-display text-3xl font-bold text-white">1000+</span>
-                                <span className="text-sm">Khách hàng</span>
-                            </div>
-                        </div>
-                    </GlassCard>
+            <div className="flex-1 space-y-8 animate-fade-in-up">
+                <div className="space-y-4">
+                    <span className="inline-block px-4 py-1.5 rounded-full bg-[#276515]/10 text-[#276515] text-xs font-bold uppercase tracking-widest animate-bounce-slow">Premium Quality Nuts</span>
+                    <h2 className="text-[#131712] dark:text-white text-5xl lg:text-[64px] font-black leading-[1.1] tracking-tight">
+                        Hạt dinh dưỡng sạch – Tốt cho sức khỏe mỗi ngày
+                    </h2>
+                    <p className="text-slate-600 dark:text-slate-400 text-lg lg:text-xl leading-relaxed max-w-xl">
+                        Hạt Xanh cung cấp các loại hạt dinh dưỡng cao cấp, 100% tự nhiên, không chất bảo quản, mang lại nguồn năng lượng sạch cho gia đình bạn.
+                    </p>
+                </div>
+                <div className="flex flex-wrap gap-4">
+                    <Link href="/products" className="px-8 py-4 bg-[#166534] text-white rounded-xl font-bold text-lg hover:bg-[#276515] transition-all shadow-xl shadow-[#166534]/20 flex items-center gap-2 hover:translate-x-1">
+                        Mua ngay <span className="material-symbols-outlined">arrow_forward</span>
+                    </Link>
+                    <Link href="/products?category=combo" className="px-8 py-4 bg-white dark:bg-slate-800 border-2 border-[#276515]/20 text-[#276515] dark:text-green-400 rounded-xl font-bold text-lg hover:bg-[#276515]/5 transition-all">
+                        Xem combo
+                    </Link>
                 </div>
             </div>
-
-            {/* Scroll Indicator */}
-            <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-                <HiChevronDown className="h-8 w-8 text-white/60" />
+            <div className="flex-1 relative w-full">
+                <div className="absolute inset-0 bg-[#276515]/10 rounded-full blur-3xl -z-10 scale-90 animate-pulse-slow"></div>
+                <div className="w-full aspect-square bg-center bg-no-repeat bg-cover rounded-[2rem] overflow-hidden shadow-2xl transform hover:rotate-1 transition-transform duration-500" style={{ backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuBxUhJYP_TBdQSRJNavf4uEPfrqb-9dwQMQX7oBBK8DF4q0gUllk6aALikgv8zvk-bwwacanl8qPT5NmgX0i7S-yl_BoyYqmKwm1upd55h0nUapDA59R_vxfCI442xlubeedkIA9W4NJBcvTx0G4eGcOl2lHRZBC4oE_u9MrgrivJCjJs9VD7g5zhw6J2R-joiB-jZAAAeIV8yRlKGKw0P5Inj-1HpF5X1d_yG7j7D2JPaR4yoUOttyxllGAZiUFIGgG6V8J7DjPN8')" }}>
+                </div>
             </div>
         </section>
     );
-};
+}

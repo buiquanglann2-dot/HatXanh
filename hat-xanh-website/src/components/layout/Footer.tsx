@@ -1,96 +1,80 @@
 import React from 'react';
-import Link from 'next/link';
-import { siteConfig } from '@/data/site-config';
-import { Container } from '@/components/common/Container';
-import { HiLocationMarker, HiPhone, HiMail } from 'react-icons/hi';
-import { FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa'; // Assuming react-icons/fa is available or use Hi
 
-export const Footer = () => {
+export default function Footer() {
     return (
-        <footer className="bg-neutral-900 text-neutral-300 pt-16 pb-8 border-t border-neutral-800">
-            <Container>
-                <div className="grid grid-cols-1 gap-12 lg:grid-cols-4 lg:gap-8">
-                    {/* Brand & Newsletter */}
-                    <div className="lg:col-span-1 space-y-6">
-                        <div>
-                            <h3 className="text-2xl font-display font-bold text-white mb-2">{siteConfig.name}</h3>
-                            <p className="text-sm text-neutral-400 leading-relaxed">
-                                {siteConfig.description} Mang hương vị Tây Nguyên nguyên bản đến mọi nhà.
-                            </p>
+        <footer className="bg-white dark:bg-[#152012] border-t border-[#276515]/10 pt-20 pb-10">
+            <div className="max-w-[1280px] mx-auto px-6 lg:px-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                    {/* Column 1 */}
+                    <div className="space-y-6">
+                        <div className="flex items-center gap-3">
+                            <div className="bg-[#276515] p-1 rounded-lg">
+                                <span className="material-symbols-outlined text-white text-xl">eco</span>
+                            </div>
+                            <h4 className="text-[#276515] text-xl font-black tracking-tight">Hạt Xanh</h4>
                         </div>
-
-                        <div className="pt-4">
-                            <h4 className="text-sm font-semibold text-white uppercase tracking-wide mb-3">Đăng ký nhận tin</h4>
-                            <form className="flex gap-2">
-                                <input
-                                    type="email"
-                                    placeholder="Email của bạn..."
-                                    className="bg-neutral-800 border-none rounded-lg px-3 py-2 text-sm text-white focus:ring-1 focus:ring-primary-500 w-full placeholder:text-neutral-500"
-                                />
-                                <button className="bg-primary-600 hover:bg-primary-700 text-white rounded-lg px-4 py-2 text-sm transition-colors">
-                                    →
-                                </button>
-                            </form>
+                        <p className="text-slate-500 text-sm leading-relaxed">
+                            Hạt Xanh tự hào là đơn vị cung cấp các dòng hạt dinh dưỡng cao cấp nhất, mang lại giá trị sức khỏe bền vững cho cộng đồng.
+                        </p>
+                        <div className="flex gap-4">
+                            {['social_leaderboard', 'share', 'video_library'].map((icon) => (
+                                <a key={icon} href="#" className="w-10 h-10 rounded-full border border-[#276515]/20 flex items-center justify-center text-[#276515] hover:bg-[#276515] hover:text-white transition-all transform hover:scale-110">
+                                    <span className="material-symbols-outlined text-xl">{icon}</span>
+                                </a>
+                            ))}
                         </div>
                     </div>
-
-                    {/* Products Links */}
-                    <div className="lg:col-span-1 lg:pl-8">
-                        <h4 className="text-sm font-bold text-white uppercase tracking-wider mb-6">Sản phẩm</h4>
-                        <ul className="space-y-3 text-sm">
-                            <li><Link href="/san-pham" className="hover:text-primary-400 transition-colors block py-0.5">Tất cả sản phẩm</Link></li>
-                            <li><Link href="/san-pham?category=hat-dieu" className="hover:text-primary-400 transition-colors block py-0.5">Hạt điều rang củi</Link></li>
-                            <li><Link href="/san-pham?category=trai-cay-say" className="hover:text-primary-400 transition-colors block py-0.5">Trái cây sấy dẻo</Link></li>
-                            <li><Link href="/san-pham?category=ca-phe" className="hover:text-primary-400 transition-colors block py-0.5">Cà phê nguyên chất</Link></li>
+                    {/* Column 2 */}
+                    <div className="space-y-6">
+                        <h5 className="font-bold text-slate-900 dark:text-white uppercase tracking-wider text-xs">Liên hệ</h5>
+                        <ul className="space-y-4">
+                            <li className="flex items-start gap-3 text-sm text-slate-500">
+                                <span className="material-symbols-outlined text-[#276515] text-sm mt-0.5">location_on</span>
+                                <span>123 Đường Số 7, P. Thảo Điền, Quận 2, TP. Hồ Chí Minh</span>
+                            </li>
+                            <li className="flex items-center gap-3 text-sm text-slate-500">
+                                <span className="material-symbols-outlined text-[#276515] text-sm">call</span>
+                                <span>Hotline: 0987.654.321</span>
+                            </li>
+                            <li className="flex items-center gap-3 text-sm text-slate-500">
+                                <span className="material-symbols-outlined text-[#276515] text-sm">mail</span>
+                                <span>hello@hatxanh.com</span>
+                            </li>
                         </ul>
                     </div>
-
-                    {/* Support Links */}
-                    <div className="lg:col-span-1">
-                        <h4 className="text-sm font-bold text-white uppercase tracking-wider mb-6">Hỗ trợ khách hàng</h4>
-                        <ul className="space-y-3 text-sm">
-                            <li><Link href="/chinh-sach" className="hover:text-primary-400 transition-colors block py-0.5">Chính sách vận chuyển</Link></li>
-                            <li><Link href="/chinh-sach" className="hover:text-primary-400 transition-colors block py-0.5">Chính sách đổi trả 7 ngày</Link></li>
-                            <li><Link href="/lien-he" className="hover:text-primary-400 transition-colors block py-0.5">Liên hệ hợp tác</Link></li>
-                            <li><Link href="/chinh-sach" className="hover:text-primary-400 transition-colors block py-0.5">Bảo mật thông tin</Link></li>
+                    {/* Column 3 */}
+                    <div className="space-y-6">
+                        <h5 className="font-bold text-slate-900 dark:text-white uppercase tracking-wider text-xs">Chính sách</h5>
+                        <ul className="space-y-3">
+                            {['Hướng dẫn mua hàng', 'Chính sách vận chuyển', 'Chính sách bảo mật', 'Chính sách đổi trả'].map((item) => (
+                                <li key={item}><a href="#" className="text-sm text-slate-500 hover:text-[#276515] transition-colors hover:translate-x-1 inline-block">{item}</a></li>
+                            ))}
                         </ul>
                     </div>
-
-                    {/* Contact Info */}
-                    <div className="lg:col-span-1">
-                        <h4 className="text-sm font-bold text-white uppercase tracking-wider mb-6">Liên hệ</h4>
-                        <ul className="space-y-4 text-sm">
-                            <li className="flex items-start">
-                                <HiLocationMarker className="mr-3 h-5 w-5 text-primary-500 flex-shrink-0 mt-0.5" />
-                                <span>{siteConfig.contact.address}</span>
-                            </li>
-                            <li className="flex items-center">
-                                <HiPhone className="mr-3 h-5 w-5 text-primary-500 flex-shrink-0" />
-                                <span>{siteConfig.contact.phone}</span>
-                            </li>
-                            <li className="flex items-center">
-                                <HiMail className="mr-3 h-5 w-5 text-primary-500 flex-shrink-0" />
-                                <span>{siteConfig.contact.email}</span>
-                            </li>
-                        </ul>
-
-                        <div className="mt-8 flex gap-4">
-                            {/* Social Placeholders */}
-                            <a href="#" className="w-8 h-8 rounded-full bg-neutral-800 flex items-center justify-center hover:bg-primary-600 transition-colors text-white">F</a>
-                            <a href="#" className="w-8 h-8 rounded-full bg-neutral-800 flex items-center justify-center hover:bg-primary-600 transition-colors text-white">Y</a>
-                            <a href="#" className="w-8 h-8 rounded-full bg-neutral-800 flex items-center justify-center hover:bg-primary-600 transition-colors text-white">I</a>
+                    {/* Column 4 */}
+                    <div className="space-y-6">
+                        <h5 className="font-bold text-slate-900 dark:text-white uppercase tracking-wider text-xs">Đăng ký nhận tin</h5>
+                        <p className="text-sm text-slate-500">Nhận ưu đãi 10% cho đơn hàng đầu tiên.</p>
+                        <div className="relative">
+                            <input
+                                type="email"
+                                placeholder="Email của bạn"
+                                className="w-full h-12 rounded-lg border-[#276515]/10 bg-slate-50 dark:bg-slate-800 px-4 text-sm focus:ring-[#276515] focus:border-[#276515] transition-all"
+                            />
+                            <button className="absolute right-1 top-1 h-10 w-10 flex items-center justify-center bg-[#276515] text-white rounded-md hover:bg-[#166534] transition-colors">
+                                <span className="material-symbols-outlined">send</span>
+                            </button>
                         </div>
                     </div>
                 </div>
-
-                <div className="mt-16 border-t border-neutral-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-neutral-500">
-                    <p>© {new Date().getFullYear()} {siteConfig.name}. Designed with passion.</p>
+                <div className="border-t border-[#276515]/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-400">
+                    <p>© 2024 Hạt Xanh. Bảo lưu mọi quyền.</p>
                     <div className="flex gap-6">
-                        <Link href="#" className="hover:text-white transition-colors">Điều khoản</Link>
-                        <Link href="#" className="hover:text-white transition-colors">Bảo mật</Link>
+                        <a href="#" className="hover:text-[#276515]">Điều khoản dịch vụ</a>
+                        <a href="#" className="hover:text-[#276515]">Sitemap</a>
                     </div>
                 </div>
-            </Container>
+            </div>
         </footer>
     );
-};
+}

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container } from '@/components/common/Container';
 import { Metadata } from 'next';
-import Image from 'next/image';
+
 import { Button } from '@/components/common/Button';
 import { HiArrowRight } from 'react-icons/hi';
 
